@@ -12,7 +12,7 @@ phases:
         nodejs: 18
   build:
     commands:
-      - npm install date-and-time
+      - npm install moment-timezone
       #install Cloudguard CI/CD plugin
       - npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
       - export BUCKET=codepipeline-eu-west-1-app2artifact-bucket

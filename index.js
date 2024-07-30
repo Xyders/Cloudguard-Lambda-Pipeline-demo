@@ -1,14 +1,13 @@
-const dateAndTime = require('date-and-time');
+'use strict';
 
-exports.handler = (event, context, callback) => {
-    // Set the timezone to Tokyo
-    dateAndTime.timezone('Asia/Tokyo');
+const moment = require('moment-timezone');
 
-    // Get the current time
-    const currentTime = dateAndTime.format(new Date(), 'YYYY/MM/DD HH:mm:ss');
-    
-    callback(null, {
-        statusCode: '200',
-        body: 'The time in Japan is: ' + currentTime.toString(),
-    });
-};
+exports.handler = async (context, req) => {
+    const todayMoment = moment().tz('Asia/Tokyo');
+
+    return {
+       statusCode: 200,
+       headers: {'Content-Type': 'application/text'},
+       body: 'The time in Japan is: ' + todayMoment
+    };
+}

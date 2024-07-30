@@ -1,4 +1,4 @@
-#This is a workflow fie 
+#This is a workflow file 
 
 name: Cloudguard Proact code-scan
 on:

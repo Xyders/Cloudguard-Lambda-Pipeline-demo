@@ -33,7 +33,7 @@ jobs:
               #Install Cloudguard serverless plugin
               sudo npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
               #Scan the template file and its artifacts 
-              cloudguard proact -m template.yaml -t ${{secrets.CLOUDGUARD_ID}}:${{secrets.CLOUDGUARD_SECRET}}
+              cloudguard proact -m template.yaml -t ${{secrets.CLOUDGUARD_ID}}:${{secrets.CLOUDGUARD_SECRET}} -b https://api.eu1.cgn.portal.checkpoint.com/v2
 
       - name: Uploading Scan report to S3
         run: |

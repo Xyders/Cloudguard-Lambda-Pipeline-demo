@@ -2,7 +2,7 @@
 
 const moment = require('moment-timezone');
 
-exports.handler = async (context, req) => {
+exports.handler = function (event, context, callback) {
     const todayMoment = moment().tz('Asia/Tokyo');
 
     callback(null, {

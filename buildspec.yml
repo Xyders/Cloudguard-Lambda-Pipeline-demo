@@ -12,7 +12,7 @@ phases:
         nodejs: 20
   build:
     commands:
-      - npm install time
+      - npm install date-and-time
       #install Cloudguard CI/CD plugin
       - npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
       - export BUCKET=codepipeline-eu-west-1-app2artifact-bucket

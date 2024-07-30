@@ -38,4 +38,4 @@ jobs:
         run: |
               pwd
               aws s3 cp ./cloudguard_output/CloudGuardScanReport.html s3://scott-proact-scan-report/`date +"%y"`/`date +"%d"`/`date +"%H%M%S"`report.html
-              
+
